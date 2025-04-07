@@ -1,13 +1,23 @@
-### CIFAR 10 Image recognition application using Convolutional Neural Network
+## CIFAR-10 Image Recognition Application using Convolutional Neural Networks
+
+A simple and intuitive application that recognizes images from various everyday object categories using a Convolutional Neural Network (CNN). The model is trained on the CIFAR-10 dataset and features a user-friendly PyTkinter GUI for interaction.
+
 
 ![alt text](demo.gif)
 
-Additional Infos:
+## Features
 
-    1. Under the hood image recognization happens with Convolutional Neural Network with 
-       ADAM Optimizer.
-    2. This software uses CIFAR 10 image database for training CNN
-    3. Uses PyTkinter for User Interface
-    4. Neural Network is implemented using PyTorch
+    1. Image recognition powered by a Convolutional Neural Network trained with the Adam Optimizer.
+    2. Utilizes the CIFAR-10 dataset, which contains 60,000 labeled images across 10 object classes.
+    3. Built with a PyTkinter interface for ease of use and interaction.
+    4. The neural network is implemented using PyTorch for efficient training and evaluation.
 
 
+## Requirements
+
+Make sure to install the following Python packages before running the app
+
+    1. PyTorch
+    2. Pillow
+    3. torchvision
+    4. opencv-python
