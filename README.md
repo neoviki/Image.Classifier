@@ -12,12 +12,14 @@ A simple and intuitive application that recognizes images from various everyday 
     3. Built with a PyTkinter interface for ease of use and interaction.
     4. The neural network is implemented using PyTorch for efficient training and evaluation.
 
+## Install Dependencies 
+```bash
+chmod +x install.dependencies.sh
+./install.dependencies.sh
+```
 
-## Requirements
-
-Make sure to install the following Python packages before running the app
-
-    1. PyTorch
-    2. Pillow
-    3. torchvision
-    4. opencv-python
+## Run the application
+```bash
+chmod +x run.app.sh
+./run.app.sh
+```
