@@ -4,3 +4,5 @@ Change demo gif to dark bg version
 Add it to viki.design
 Make download separate 
 add support to keep the data in the same repo split and merge option
+Change font
+Font looks blurred on Ubuntu in mac it works fine ( fix it )
