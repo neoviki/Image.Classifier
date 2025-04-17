@@ -76,6 +76,7 @@ def main():
     download()
     load()
     init_cnn()
-    UI.render(ui_callback, image_path)
+    #UI.render(ui_callback, image_path)
+    UI.render(ui_callback, 'data/4.tested.images')
 
 main()
