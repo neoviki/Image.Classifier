@@ -19,7 +19,6 @@ cifar_data_path         = 'data/1.training.and.test.data'
 model_path              = 'data/2.ai.model'
 image_path              = 'data/3.ai.model.verification.images'
 
-#model_file              = model_path + '/' + 'torch.pth'
 model_file              = model_path + '/' + 'torch.pt'
 
 training_batch_size = 64

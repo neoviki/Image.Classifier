@@ -2,3 +2,6 @@ List
 Download all essential data and split and keep in the same repo. ( The app should be self contained without any external dependency )
 Change demo gif to dark bg version
 add support to keep the data in the same repo split and merge option
+Seperate Download, Build and Train Model and application as seperate entities ( In train model have cli option for learn rate, choosing optimizer etc )
+
+
