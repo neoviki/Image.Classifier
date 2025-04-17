@@ -1,6 +1,3 @@
 #!/bin/bash
-if [[ ! -d model ]]; then
-    mkdir model
-fi
 cd src
-python3 CIFAR10_Image_Recognizer.py
+python3 main_cifar10_image_recognizer.py
