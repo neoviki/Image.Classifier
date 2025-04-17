@@ -23,6 +23,7 @@ from tkinter import filedialog
 from tkinter import PhotoImage
 from PIL import Image, ImageTk
 from lib_logger import *
+import sys
 log             = logger()
 
 
@@ -217,6 +218,7 @@ def render(external_callback, default_images_path):
     def on_close():
         print(log._if+"Closing UI")
         gui.destroy()
+        sys.exit(0)
 
     gui.protocol("WM_DELETE_WINDOW", on_close)
 
@@ -225,6 +227,7 @@ def render(external_callback, default_images_path):
         if event.char == 'q':
             print(log._if+"Key press detected ('q') : Closing GUI.")
             gui.destroy()
+            sys.exit(0)
 
     gui.bind("<Key>", on_key_press)
 
@@ -235,4 +238,3 @@ def render(external_callback, default_images_path):
     tk.mainloop()
 
 
-#render(None)

@@ -29,7 +29,7 @@ classes = ('plane', 'car', 'bird', 'cat',
 #           'deer', 'bird', 'frog', 'horse', 'ship', 'truck')
 
 
-def Download_CIFAR_TrainingData(path):
+def Download_CIFAR_Data(path):
     t = transforms
     '''
         Convert Image from range [0, 1] to  range [-1 to 1]
@@ -50,30 +50,6 @@ def Download_CIFAR_TrainingData(path):
     else:
         print(log._st+ "CIFAR TRAINING DATA ALREADY EXIST - SKIPPING DOWNLOAD")
         data_object = datasets.CIFAR10(path, train=True, download=False, transform=tf)
-
-    return data_object
-
-
-def Download_CIFAR_TestData(path):
-    t = transforms
-
-    '''
-        Convert Image from range [0, 1] to  range [-1 to 1]
-
-        image = (image - n_mean)/n_std
-    '''
-    n_mean = (0.5, 0.5, 0.5)
-    n_std  = (0.5, 0.5, 0.5)
-
-    tf = t.Compose([t.ToTensor(), t.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    #tf = t.Compose([t.ToTensor(), t.Normalize(n_mean, n_std)])
-    if not os.path.exists(path):
-        os.makedirs(path, exist_ok=True)
-        print(log._ed+ "DOWNLOADING CIFAR TEST DATA")
-        data_object  = datasets.CIFAR10(path, train=False, download=True, transform=tf)
-    else:
-        print(log._st+ "CIFAR TEST DATA ALREADY EXIST - SKIPPING DOWNLOAD")
-        data_object  = datasets.CIFAR10(path, train=False, download=False, transform=tf)
 
     return data_object
 

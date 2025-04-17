@@ -1,0 +1,14 @@
+SIZE(~KB),LEAF_NODE,FILE_DIR,SIZE (~GB),SIZE(~MB),COMMENT,FULL_PATH
+722455049,ai.vision.image.classifier.cnn.cifar10,src,0,688, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/src
+195818239,ai.vision.image.classifier.cnn.cifar10,.git,0,186, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/.git
+10092279,ai.vision.image.classifier.cnn.cifar10,versions,0,9, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/versions
+1076847,ai.vision.image.classifier.cnn.cifar10,demo.gif,0,1, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/demo.gif
+1069,ai.vision.image.classifier.cnn.cifar10,License.md,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/License.md
+898,ai.vision.image.classifier.cnn.cifar10,README.md,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/README.md
+243,ai.vision.image.classifier.cnn.cifar10,Tasks.csv,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/Tasks.csv
+159,ai.vision.image.classifier.cnn.cifar10,install.dependencies.sh,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/install.dependencies.sh
+123,ai.vision.image.classifier.cnn.cifar10,c,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/c
+107,ai.vision.image.classifier.cnn.cifar10,clean.sh,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/clean.sh
+102,ai.vision.image.classifier.cnn.cifar10,Tasks.Completed.csv,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/Tasks.Completed.csv
+60,ai.vision.image.classifier.cnn.cifar10,run.app.sh,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/run.app.sh
+1,ai.vision.image.classifier.cnn.cifar10,log.clean.txt,0,0, ,/home/viki/git/neoviki/public/ai.vision.image.classifier.cnn.cifar10/log.clean.txt

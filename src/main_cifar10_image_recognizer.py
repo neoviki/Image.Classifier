@@ -15,10 +15,9 @@ log             = logger()
 
 net             = None
 
-cifar_path_training     = 'data/1.training.data'
-cifar_path_test         = 'data/2.test.data'
-image_path              = 'data/4.ai.model.verification.images'
-model_path              = 'data/3.ai.model'
+cifar_data_path         = 'data/1.training.and.test.data'
+model_path              = 'data/2.ai.model'
+image_path              = 'data/3.ai.model.verification.images'
 
 #model_file              = model_path + '/' + 'torch.pth'
 model_file              = model_path + '/' + 'torch.pt'
@@ -37,19 +36,18 @@ def ui_callback(file_name):
     return prediction
 
 def download():
-    global training_data, test_data, training_object, test_object
+    global training_data, test_data, cifar10_data_object, test_object
     global training_data, test_data
-    training_object = Download_CIFAR_TrainingData(cifar_path_training)
-    test_object     = Download_CIFAR_TestData(cifar_path_test)
+    cifar10_data_object = Download_CIFAR_Data(cifar_data_path)
 
 def load():
-    global training_data, test_data, training_object, test_object
+    global training_data, test_data, cifar10_data_object, test_object
 
-    training_data   = Load_CIFAR_Data( training_object, training_batch_size   )
-    test_data       = Load_CIFAR_Data( test_object,     test_batch_size       )
+    training_data   = Load_CIFAR_Data( cifar10_data_object, training_batch_size   )
+    test_data       = Load_CIFAR_Data( cifar10_data_object, test_batch_size       )
 
 def init_cnn():
-    global net, training_data, test_data, training_object, test_object
+    global net, training_data, test_data, cifar10_data_object, test_object
     ''' Initialize CNN '''
     if os.path.exists(model_file):
         net = LoadModel(model_file)
