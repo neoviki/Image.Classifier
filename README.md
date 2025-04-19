@@ -23,3 +23,11 @@ chmod +x install.dependencies.sh
 chmod +x run.app.sh
 ./run.app.sh
 ```
+## PARAM SETTINGS
+
+Config Name | Batch Size | LR | Momentum | Notes
+Baseline | 64 | 0.0001 | 0.9 | Your current setup
+Faster Converge | 128 | 0.001 | 0.9 | Faster training, test for stability
+Adaptive LR | 64 | 0.01 → decay | 0.9 | Use StepLR, ReduceLROnPlateau, etc.
+Adam Optimizer | 64 | 0.001 | – | Try Adam instead of SGD
+

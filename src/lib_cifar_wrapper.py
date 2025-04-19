@@ -29,29 +29,39 @@ classes = ('plane', 'car', 'bird', 'cat',
 #           'deer', 'bird', 'frog', 'horse', 'ship', 'truck')
 
 
-def Download_CIFAR_Data(path):
-    t = transforms
-    '''
-        Convert Image from range [0, 1] to  range [-1 to 1]
+def Download_CIFAR_TrainingData(path):
+    print(log._st + "CHECKING CIFAR TRAINING DATA")
 
-        image = (image - n_mean)/n_std
-    '''
-    #Mean of all 3 channels (depth, height, width)
-    #n_mean = (0.5, 0.5, 0.5)
-    #n_std  = (0.5, 0.5, 0.5)
-
-    tf = t.Compose([t.ToTensor(), t.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
-    #tf = t.Compose([t.ToTensor(), t.Normalize(n_mean, n_std)])
-
-    if not os.path.exists(path):
-        os.makedirs(path, exist_ok=True)
-        print(log._st+ "DOWNLOADING CIFAR TRAINING DATA")
-        data_object = datasets.CIFAR10(path, train=True, download=True, transform=tf)
+    cifar_processed_path = os.path.join(path, "cifar-10-batches-py")
+    if os.path.exists(cifar_processed_path):
+        print(log._ed + "CIFAR TRAINING DATA ALREADY EXISTS")
+        download = False
     else:
-        print(log._st+ "CIFAR TRAINING DATA ALREADY EXIST - SKIPPING DOWNLOAD")
-        data_object = datasets.CIFAR10(path, train=True, download=False, transform=tf)
+        print(log._st + "TRAINING DATA NOT FOUND, DOWNLOADING...")
+        download = True
 
+    tf = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    data_object = datasets.CIFAR10(path, train=True, download=download, transform=tf)
+    print(log._ed + "CIFAR TRAINING DATA READY")
     return data_object
+
+
+def Download_CIFAR_TestData(path):
+    print(log._st + "CHECKING CIFAR TEST DATA")
+
+    cifar_processed_path = os.path.join(path, "cifar-10-batches-py")
+    if os.path.exists(cifar_processed_path):
+        print(log._ed + "CIFAR TEST DATA ALREADY EXISTS")
+        download = False
+    else:
+        print(log._st + "TEST DATA NOT FOUND, DOWNLOADING...")
+        download = True
+
+    tf = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
+    data_object = datasets.CIFAR10(path, train=False, download=download, transform=tf)
+    print(log._ed + "CIFAR TEST DATA READY")
+    return data_object
+
 
 def Load_CIFAR_Data(data_object, batch_size):
     print(log._st+ "LOADING CIFAR DATA")

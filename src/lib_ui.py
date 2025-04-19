@@ -90,8 +90,6 @@ def classify_image_callback(gui, canvas, external_callback):
 
     return
 
-from PIL import Image, ImageTk
-
 def browse_image_callback(gui, canvas, fname):
     global __canvas1__, __canvas2__, open_path
     canvas.delete("all")
